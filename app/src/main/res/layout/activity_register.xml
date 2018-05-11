@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="10sp"
+        android:text="Usuario"/>
+
+    <EditText
+        android:id="@+id/user_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="text"
+        android:maxLines="1"
+        android:maxLength="100"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="10sp"
+        android:text="Contraseña"/>
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:maxLength="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="10sp"
+        android:text="Nombre"/>
+
+    <EditText
+        android:id="@+id/nombre_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:maxLength="500"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="10sp"
+        android:text="Apellido"/>
+
+    <EditText
+        android:id="@+id/apellido_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:maxLength="500"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="10sp"
+        android:text="Correo"/>
+
+    <EditText
+        android:id="@+id/correo_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:maxLength="500"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Registrar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:onClick="callRegister"/>
+
+</LinearLayout>
