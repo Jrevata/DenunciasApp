@@ -7,27 +7,23 @@ package com.jrevata.denunciasapp.denunciasapp.models;
 public class Denuncia {
 
     private Integer id;
-    private Integer user_id;
+    private Ciudadano ciudadado;
     private String title;
     private String description;
-    private String coordenadas;
     private String photo;
     private String coordinates;
 
 
     public Denuncia(){}
 
-
-    public Denuncia(Integer id, Integer user_id, String title, String description, String coordenadas, String photo, String coordinates) {
+    public Denuncia(Integer id, Ciudadano ciudadado, String title, String description, String photo, String coordinates) {
         this.id = id;
-        this.user_id = user_id;
+        this.ciudadado = ciudadado;
         this.title = title;
         this.description = description;
-        this.coordenadas = coordenadas;
         this.photo = photo;
         this.coordinates = coordinates;
     }
-
 
     public Integer getId() {
         return id;
@@ -37,12 +33,12 @@ public class Denuncia {
         this.id = id;
     }
 
-    public Integer getUser_id() {
-        return user_id;
+    public Ciudadano getCiudadado() {
+        return ciudadado;
     }
 
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
+    public void setCiudadado(Ciudadano ciudadado) {
+        this.ciudadado = ciudadado;
     }
 
     public String getTitle() {
@@ -59,14 +55,6 @@ public class Denuncia {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getCoordenadas() {
-        return coordenadas;
-    }
-
-    public void setCoordenadas(String coordenadas) {
-        this.coordenadas = coordenadas;
     }
 
     public String getPhoto() {
@@ -89,10 +77,9 @@ public class Denuncia {
     public String toString() {
         return "Denuncia{" +
                 "id=" + id +
-                ", user_id=" + user_id +
+                ", ciudadado=" + ciudadado +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", coordenadas='" + coordenadas + '\'' +
                 ", photo='" + photo + '\'' +
                 ", coordinates='" + coordinates + '\'' +
                 '}';
