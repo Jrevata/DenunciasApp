@@ -50,6 +50,7 @@ public class LogInActivity extends AppCompatActivity {
                        Ciudadano ciudadano = response.body();
 
                         Intent intent = new Intent(LogInActivity.this, MainActivity.class);
+                        intent.putExtra("ciudadano_id", ciudadano.getId());
                         startActivity(intent);
                     } else {
                         Log.e(TAG, "onError: " + response.errorBody().string());

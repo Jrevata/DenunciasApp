@@ -55,13 +55,13 @@ public class DenunciaAdapter extends RecyclerView.Adapter<DenunciaAdapter.ViewHo
     public void onBindViewHolder(DenunciaAdapter.ViewHolder viewHolder, final int position) {
         final Denuncia denuncia = denuncias.get(position);
 
-        String url = ApiService.API_BASE_URL + "/images/" + denuncia.getPhoto();
+        String url = ApiService.API_BASE_URL + "/images/" + denuncia.getFoto();
         Picasso.with(viewHolder.itemView.getContext()).load(url).into(viewHolder.pictureImage);
 
 
-        viewHolder.nombre.setText(denuncia.getCiudadado().getName());
-        viewHolder.titulo.setText(denuncia.getTitle());
-        viewHolder.coordenadas.setText(denuncia.getCoordinates());
+        //viewHolder.nombre.setText(denuncia.getCiudadado().getName());
+        viewHolder.titulo.setText(denuncia.getTitulo());
+        viewHolder.coordenadas.setText(denuncia.getCoordenadas());
 
         /*
         holder.itemView.setOnClickListener(new View.OnClickListener() {

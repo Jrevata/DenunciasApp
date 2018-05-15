@@ -4,6 +4,8 @@ import com.jrevata.denunciasapp.denunciasapp.ResponseMessage;
 import com.jrevata.denunciasapp.denunciasapp.models.Ciudadano;
 import com.jrevata.denunciasapp.denunciasapp.models.Denuncia;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -26,6 +28,10 @@ public interface ApiService {
     @POST("/api/v1/loginuser")
     Call<Ciudadano> Login(@Field("username") String username,
                           @Field("password") String password);
+
+    @GET("api/v1/listDenuncia/{id}")
+    Call<List<Denuncia>> listDenuncias(@Path("id") Integer ciudadano_id);
+
 
 
 }

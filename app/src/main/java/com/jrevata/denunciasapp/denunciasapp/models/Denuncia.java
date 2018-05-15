@@ -7,22 +7,34 @@ package com.jrevata.denunciasapp.denunciasapp.models;
 public class Denuncia {
 
     private Integer id;
-    private Ciudadano ciudadado;
-    private String title;
-    private String description;
-    private String photo;
-    private String coordinates;
+    private Integer ciudadanos_id;
+    private String titulo;
+    private String descripcion;
+    private String foto;
+    private String coordenadas;
 
 
     public Denuncia(){}
 
-    public Denuncia(Integer id, Ciudadano ciudadado, String title, String description, String photo, String coordinates) {
+    public Denuncia(Integer id, Integer ciudadanos_id, String titulo, String descripcion, String foto, String coordenadas) {
         this.id = id;
-        this.ciudadado = ciudadado;
-        this.title = title;
-        this.description = description;
-        this.photo = photo;
-        this.coordinates = coordinates;
+        this.ciudadanos_id = ciudadanos_id;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.foto = foto;
+        this.coordenadas = coordenadas;
+    }
+
+    @Override
+    public String toString() {
+        return "Denuncia{" +
+                "id=" + id +
+                ", ciudadanos_id=" + ciudadanos_id +
+                ", titulo='" + titulo + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", foto='" + foto + '\'' +
+                ", coordenadas='" + coordenadas + '\'' +
+                '}';
     }
 
     public Integer getId() {
@@ -33,55 +45,43 @@ public class Denuncia {
         this.id = id;
     }
 
-    public Ciudadano getCiudadado() {
-        return ciudadado;
+    public Integer getCiudadanos_id() {
+        return ciudadanos_id;
     }
 
-    public void setCiudadado(Ciudadano ciudadado) {
-        this.ciudadado = ciudadado;
+    public void setCiudadanos_id(Integer ciudadanos_id) {
+        this.ciudadanos_id = ciudadanos_id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getFoto() {
+        return foto;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
-    public String getCoordinates() {
-        return coordinates;
+    public String getCoordenadas() {
+        return coordenadas;
     }
 
-    public void setCoordinates(String coordinates) {
-        this.coordinates = coordinates;
-    }
-
-    @Override
-    public String toString() {
-        return "Denuncia{" +
-                "id=" + id +
-                ", ciudadado=" + ciudadado +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", photo='" + photo + '\'' +
-                ", coordinates='" + coordinates + '\'' +
-                '}';
+    public void setCoordenadas(String coordenadas) {
+        this.coordenadas = coordenadas;
     }
 }
