@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.jrevata.denunciasapp.denunciasapp.R;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     private final String TAG = MainActivity.class.getSimpleName();
-
+    Integer ciudadano_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         final DenunciaAdapter denunciaAdapter = new DenunciaAdapter();
 
-        Integer ciudadano_id = getIntent().getExtras().getInt("ciudadano_id");
+        ciudadano_id = getIntent().getExtras().getInt("ciudadano_id");
 
         Toast.makeText(this,ciudadano_id.toString(),Toast.LENGTH_LONG).show();
 
@@ -83,5 +84,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+    public void action(View view){
+        Intent intent = new Intent(this, RegisterComplaintActivity.class);
+        intent.putExtra("ciudadano_id", ciudadano_id);
+        startActivity(intent);
     }
 }

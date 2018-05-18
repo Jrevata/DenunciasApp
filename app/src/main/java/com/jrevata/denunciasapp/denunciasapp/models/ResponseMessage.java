@@ -1,10 +1,12 @@
-package com.jrevata.denunciasapp.denunciasapp;
+package com.jrevata.denunciasapp.denunciasapp.models;
 
 /**
- * Created by JORDAN on 14/05/2018.
+ * Created by JORDAN on 18/05/2018.
  */
 
 public class ResponseMessage {
+
+
 
     private String type;
 
@@ -33,4 +35,6 @@ public class ResponseMessage {
                 ", message='" + message + '\'' +
                 '}';
     }
+
+
 }
